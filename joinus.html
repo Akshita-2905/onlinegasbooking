@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h2>GasBooking</h2>
+        </div>
+        <ul>
+            <li><a href="ppvc.html">Home</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Join Us Section -->
+    <section class="join-us">
+        <h2>Join Us</h2>
+        <p>Become a part of GasBooking and enjoy hassle-free gas services at your fingertips.</p>
+        <form id="joinUsForm" action="#" method="POST" class="form-container">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+            </div>
+            <button type="submit" class="btn join-us-btn">Join Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 GasBooking. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add event listener to form submission
+        document.getElementById('joinUsForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+            alert('Thank you for joining GasBooking! We will reach out to you shortly.');
+            // Redirect to home page
+            window.location.href = "ppvc.html"; // Replace with your homepage file name
+        });
+    </script>
+</body>
+</html>

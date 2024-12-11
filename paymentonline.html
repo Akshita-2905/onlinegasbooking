@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <h2>GasBooking</h2>
+        </div>
+        <ul>
+            <li><a href="ppvc.html">Home</a></li>
+            <li><a href="signin.html">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <!-- Online Payment Section -->
+    <section class="payment-form">
+        <h2>Online Payment</h2>
+        <form id="paymentForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="cardholder-name">Cardholder Name</label>
+                <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="card-number">Card Number</label>
+                <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" maxlength="16" pattern="\d{16}" required>
+            </div>
+            <div class="form-group">
+                <label for="expiration-date">Expiration Date</label>
+                <input type="month" id="expiration-date" name="expiration-date" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" name="cvv" placeholder="Enter CVV" maxlength="3" pattern="\d{3}" required>
+            </div>
+            <div class="form-group">
+                <label for="zip-code">Billing Zip Code</label>
+                <input type="text" id="zip-code" name="zip-code" placeholder="Enter your zip code" required>
+            </div>
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 GasBooking. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add event listener to form submission
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+            alert('Payment Successful! Thank you for your transaction.');
+            // Redirect to the homepage
+            window.location.href = "ppvc.html"; // Replace "ppvc.html" with your homepage file name
+        });
+    </script>
+</body>
+</html>
